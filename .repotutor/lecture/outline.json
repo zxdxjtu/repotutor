@@ -1,0 +1,55 @@
+{
+  "projectName": "RepoTutor",
+  "description": "AI 驱动的代码仓库智能讲解系统",
+  "totalSections": 5,
+  "sections": [
+    {
+      "id": "section-01",
+      "title": "项目概览与核心理念",
+      "description": "了解 RepoTutor 的核心价值、技术栈和整体架构",
+      "estimatedDuration": "3分钟",
+      "checkpoints": [
+        "README.md:1",
+        "package.json:1"
+      ]
+    },
+    {
+      "id": "section-02",
+      "title": "MCP 架构设计",
+      "description": "深入理解 3 个 MCP 服务器的设计思路和通信机制",
+      "estimatedDuration": "4分钟",
+      "checkpoints": [
+        "mcp-servers/tts-mcp/src/index.ts:1",
+        "mcp-servers/ide-control-mcp/src/index.ts:1",
+        "mcp-servers/audio-player-mcp/src/index.ts:1"
+      ]
+    },
+    {
+      "id": "section-03",
+      "title": "TTS 语音合成服务",
+      "description": "Gemini TTS 集成实现与音频缓存机制",
+      "estimatedDuration": "3分钟",
+      "checkpoints": [
+        "mcp-servers/tts-mcp/src/gemini-tts.ts:1"
+      ]
+    },
+    {
+      "id": "section-04",
+      "title": "IDE 智能控制",
+      "description": "跨 IDE 文件导航与代码定位实现",
+      "estimatedDuration": "3分钟",
+      "checkpoints": [
+        "mcp-servers/ide-control-mcp/src/vscode-cli.ts:1"
+      ]
+    },
+    {
+      "id": "section-05",
+      "title": "自动化配置系统",
+      "description": "一键配置脚本的设计与实现",
+      "estimatedDuration": "2分钟",
+      "checkpoints": [
+        "scripts/setup-repotutor.sh:1"
+      ]
+    }
+  ]
+}

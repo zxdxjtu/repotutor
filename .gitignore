@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Environment variables - 密钥保护
+.env
+.env.local
+.env.*.local
+*.env
+
+# Build outputs
+dist/
+build/
+*.js.map
+
+# Cache directories
+.repotutor/audio_cache/
+.cache/
+*.cache
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# API keys and secrets (防止意外提交)
+*.pem
+*.key
+*secret*
+*credential*
+
+# Local MCP config (contains personal proxy settings)
+.mcp.json
+
+# Local Claude settings
+.claude/settings.local.json
+
+# Local lecture cache (generated during usage)
+.repotutor/audio_cache/

@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "repotutor-tts": {
+      "command": "node",
+      "args": ["mcp-servers/tts-mcp/dist/index.js"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+      }
+    },
+    "repotutor-ide-control": {
+      "command": "node",
+      "args": ["mcp-servers/ide-control-mcp/dist/index.js"]
+    },
+    "repotutor-audio-player": {
+      "command": "node",
+      "args": ["mcp-servers/audio-player-mcp/dist/index.js"]
+    }
+  }
+}
