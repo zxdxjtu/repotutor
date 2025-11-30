@@ -13,40 +13,34 @@ RepoTutor 是一个 AI 驱动的代码仓库讲解系统,可以为你的代码�
 
 ### 前置要求
 
-1. **安装 Node.js** (>= 18.0.0)
-   ```bash
-   # macOS 使用 Homebrew
-   brew install node
+| 依赖 | 版本 | 安装命令 |
+|------|------|----------|
+| Node.js | >= 18.0.0 | `brew install node` 或 [nodejs.org](https://nodejs.org/) |
+| Claude Code | 最新版 | `npm install -g @anthropic-ai/claude-code` |
+| Gemini API Key | - | [aistudio.google.com](https://aistudio.google.com/) (TTS 功能需要) |
 
-   # 或下载安装: https://nodejs.org/
-   ```
+### 环境变量配置
 
-2. **安装 Claude Code**
-   ```bash
-   npm install -g @anthropic-ai/claude-code
-   ```
-
-3. **获取 Gemini API Key** (可选,用于 TTS 功能)
-   - 访问: https://aistudio.google.com/
-   - 创建 API Key
-   - 添加到环境变量:
-     ```bash
-     echo 'export GEMINI_API_KEY="your-api-key-here"' >> ~/.zshrc
-     source ~/.zshrc
-     ```
+```bash
+# 添加 Gemini API Key (TTS 语音合成必需)
+echo 'export GEMINI_API_KEY="your-api-key-here"' >> ~/.zshrc
+source ~/.zshrc
+```
 
 ### 30 秒完成配置
 
 ```bash
-# 1. 进入你的代码仓库
+# 1. 克隆 RepoTutor
+git clone https://github.com/zxdxjtu/repotutor.git
+cd repotutor && npm install && npm run build
+
+# 2. 进入你的代码仓库
 cd /path/to/your/awesome/project
 
-# 2. 运行自动配置脚本 (非交互模式)
+# 3. 运行自动配置脚本
 bash /path/to/repotutor/scripts/setup-repotutor.sh -y
 
-# 3. 重启 Claude Code
-
-# 4. 在 Claude Code 中启用 MCP 服务器
+# 4. 重启 Claude Code 并启用 MCP 服务器
 /mcp
 # 启用: repotutor-tts, repotutor-ide-control, repotutor-audio-player
 
@@ -316,7 +310,7 @@ rm -rf .repotutor
 
 欢迎提交 Issue 和 Pull Request!
 
-RepoTutor 项目地址: https://github.com/your-username/repotutor
+RepoTutor 项目地址: https://github.com/zxdxjtu/repotutor
 
 ## 许可证
 

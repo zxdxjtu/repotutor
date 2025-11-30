@@ -33,19 +33,31 @@ RepoTutor 是一个创新的代码学习工具,通过 Claude Code 和 MCP (Model
 
 ## 快速开始
 
-### 30 秒配置
+### 前置要求
+
+- **Node.js** >= 18.0.0
+- **Claude Code** CLI
+- **Gemini API Key** (用于 TTS，[获取地址](https://aistudio.google.com/))
+
+### 一键配置
 
 ```bash
-# 1. 进入你的代码仓库
-cd /path/to/your/project
+# 1. 克隆并构建 RepoTutor
+git clone https://github.com/zxdxjtu/repotutor.git
+cd repotutor && npm install && npm run build
 
-# 2. 运行自动配置脚本
+# 2. 配置环境变量
+echo 'export GEMINI_API_KEY="your-api-key"' >> ~/.zshrc && source ~/.zshrc
+
+# 3. 进入你的项目并运行配置脚本
+cd /path/to/your/project
 bash /path/to/repotutor/scripts/setup-repotutor.sh -y
 
-# 3. 重启 Claude Code 并启用 MCP 服务器
+# 4. 重启 Claude Code 并启用 MCP 服务器
 /mcp
+# 启用 3 个服务器: repotutor-tts, repotutor-ide-control, repotutor-audio-player
 
-# 4. 开始讲解!
+# 5. 开始讲解!
 /tutor
 ```
 
